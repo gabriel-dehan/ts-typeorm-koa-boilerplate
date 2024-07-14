@@ -12,12 +12,12 @@
     "node": ">= 20.x"
   },
   "scripts": {
-    "dev": "NODE_ENV=development ts-node-dev -r tsconfig-paths/register src/main.ts",
+    "dev": "export NODE_ENV=development; ts-node-dev -r tsconfig-paths/register src/main.ts",
     "dev:db": "docker compose -f docker-compose.yml up -d",
-    "dev:db:init": "NODE_ENV=development ts-node ./cli/db/init.ts",
+    "dev:db:init": "export NODE_ENV=development; ts-node ./cli/db/init.ts",
     "typeorm": "ts-node -r tsconfig-paths/register -P tsconfig.json ./node_modules/typeorm/cli.js -d config/data-source.ts",
-    "build": "rimraf dist && tsc",
-    "start": "NODE_PATH=./dist NODE_ENV=production node -r tsconfig-paths/register ./dist/src/main.js",
+    "build": "node ./build.js",
+    "start": "NODE_ENV=production; node ./dist/index.js",
     "lint": "yarn lint:path .",
     "lint:path": "eslint --fix --ignore-path .gitignore",
     "prettier": "prettier --write '**/*.{js,ts}'"

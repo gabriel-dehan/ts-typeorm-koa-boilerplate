@@ -3,23 +3,21 @@ dist/
 prisma/*.db
 coverage/
 .env
+.env.test
 
 .DS_Store
 
 prisma/migrations/dev/
-.env
-.env.test
 .vscode/launch.json
 
 test/**/*.generated.ts
 test/__generated__
+
+cypress/**/*.generated.ts
+cypress/__generated__
 *.org
 */**/*.log
 newrelic_agent.log
 
 # cache directory for Jest
 .cache/jest
-
-
-cypress/**/*.generated.ts
-cypress/__generated__
