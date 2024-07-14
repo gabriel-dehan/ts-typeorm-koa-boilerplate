@@ -1,6 +1,8 @@
 import { KoaMiddlewareInterface, Middleware } from 'routing-controllers';
+import { Service } from 'typedi';
 
 // Setup CORS headers before each request
+@Service()
 @Middleware({ type: 'before' })
 export class HeaderMiddleware implements KoaMiddlewareInterface {
   async use(context: any, next: (err?: any) => any): Promise<any> {

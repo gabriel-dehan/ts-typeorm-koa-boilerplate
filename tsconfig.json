@@ -44,7 +44,8 @@
     "build.js"
   ],
   "ts-node": {
-    "require": ["tsconfig-paths/register"],
-    "swc": true
+    "require": ["tsconfig-paths/register"]
+    // "swc": true,
+    // "transpileOnly": true
   }
 }
