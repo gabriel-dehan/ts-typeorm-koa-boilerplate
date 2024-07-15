@@ -12,7 +12,7 @@
     "node": ">= 20.x"
   },
   "scripts": {
-    "dev": "export NODE_ENV=development; ts-node-dev -r tsconfig-paths/register src/main.ts",
+    "dev": "export NODE_ENV=development; ts-node-dev --respawn --transpile-only -r tsconfig-paths/register src/main.ts",
     "dev:db": "docker compose -f docker-compose.yml up -d",
     "dev:db:init": "export NODE_ENV=development; ts-node ./cli/db/init.ts",
     "typeorm": "ts-node -r tsconfig-paths/register -P tsconfig.json ./node_modules/typeorm/cli.js -d config/data-source.ts",

@@ -31,6 +31,8 @@ The `sub` of your JWT must contain the user ID you wish to use (you can create a
 
 There is an existing Insomnia collection accessible in `docs/` that you can import to try requests. You'll still need to install the JWT plugin and set the `sub` to a user existing in your database.
 
+Examples routes are `api/examples` and `api/examples/no-auth`.
+
 ## Setup
 
 ### Dependencies
