@@ -10,6 +10,9 @@ export class ExampleService {
   ) {}
 
   async someMethod(userId: string | undefined) {
+    if (!userId) {
+      return 'Hello World';
+    }
     const user = await this.userRepository.findOne({ where: { id: userId } });
 
     return `Hello ${user?.name}!`;
